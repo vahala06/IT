@@ -85,7 +85,7 @@ nav{
   box-shadow: inset 0 0 0 2em var(--hover);
 }
 .cta-select {
-  --color: red;
+  /*--color: red;*/
   --hover: #c36cbb;
 }
 .cta-add{
@@ -106,7 +106,7 @@ nav{
   color: #c36cbb;
 }
 .cta-add {
-  --color: red;
+  /*--color: red;*/
   --hover: transparent;
 }
 
