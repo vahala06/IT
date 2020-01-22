@@ -83,6 +83,8 @@ nav{
 .cta-select:hover,
 .cta-select:focus {
   box-shadow: inset 0 0 0 2em var(--hover);
+  background: #c36cbb;
+  color: #ffffff;
 }
 .cta-select {
   /*--color: red;*/
@@ -132,6 +134,7 @@ nav{
 	height: 80%;
 }
 .mid-cirle{
+
 	position: absolute;
 	top: 30%;
 	right: 30%;
