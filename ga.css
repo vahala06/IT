@@ -102,6 +102,7 @@ nav{
 	color: white;
 	border: none;
 	margin:30px 0px 0px 0px;
+	text-decoration: none;
 }
 .cta-add:hover,
 .cta-add:focus {
