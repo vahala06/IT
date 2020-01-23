@@ -91,7 +91,7 @@ nav{
 }
 .cta-select {
   /*--color: red;*/
-  --hover: #c36cbb;
+  --hover: transparent;
 }
 .cta-add{
 	background: #c36cbb;
