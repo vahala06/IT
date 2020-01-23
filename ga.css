@@ -8,33 +8,193 @@ body{
 
 }
 header{
-	display: flex;
-	width: 90%;
-	margin: auto;
-	height: 100px;
+	margin:0;
+  	padding: 0;
+ 	 background-color:rgb(179, 179, 255);
 }
-.logo-container,.nav-link,.card{
-	display: flex;
+.logoa{
+  display: block;
+  float: left;
+  max-width: 50px;
 }
-.logo-container{
-	flex: 1;
+p {
+  text-align: center;
 }
-.logo{
-	font-weight: 400;
-	margin: 5px;
+.toggle,
+[id^=drop] {
+  display: none;
 }
-nav{
-	flex: 2;
+#logo {
+  display: block;
+  padding: 0 10px;
+  float: left;
+  font-size:30px;
+  line-height: 50px;
 }
-.nav-link{
-	justify-content: space-around;
-	list-style: none;
+header:after {
+  content:"";
+  display:table;
+  clear:both;
 }
-.nav-links{
-	color: #5f5f79;
-	font-size: 18px;
-	text-decoration: none;
+header ul {
+  float: right;
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  }
+header ul li {
+  margin: 0px;
+  display:inline-block;
+  float: left;
+  background-color: transparent;
+  }
+header a {
+  display:block;
+  padding:14px 20px;  
+  color:rgb(128, 128, 128);
+  font-size:17px;
+  text-decoration:none;
 }
+header ul li ul li:hover { background: rgb(255, 204, 204); }
+header a:hover { 
+  background-color: rgb(255, 204, 204); 
+}
+header ul ul {
+  display: none;
+  position: absolute;
+  top: 60px; 
+}
+header ul li:hover > ul {
+  display:inherit;
+}
+header ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+header ul ul ul li{
+  position: relative;
+  top:-60px;
+  left:170px; 
+}
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+@media all and (max-width : 768px) {
+
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    background-color: rgb(179, 179, 255);
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px;
+    text-decoration:none;
+    border:none;
+  }
+
+  .toggle:hover {
+    background-color: rgb(255, 204, 204);
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  /* Change menu item's width to 100% */
+  header ul li {
+    display: block;
+    width: 100%;
+    }
+
+  header ul ul .toggle,
+  header ul ul a {
+    padding: 0 40px;
+  }
+
+  header ul ul ul a {
+    padding: 0 80px;
+  }
+
+  header a:hover,
+  header ul ul ul a {
+    background-color:#ffffff;
+  }
+  
+  header ul li ul li .toggle,
+  header ul ul a,
+  header ul ul ul a{
+    padding:14px 20px;  
+    color:rgb(51, 0, 51);
+    font-size:17px; 
+  }
+  
+  
+  header ul li ul li .toggle,
+  header ul ul a {
+    background-color:rgb(230, 230, 255); 
+  }
+
+  /* Hide Dropdowns by Default */
+  header ul ul {
+    float: none;
+    position:static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+    
+  /* Hide menus on hover */
+  header ul ul li:hover > ul,
+  header ul li:hover > ul {
+    display: none;
+  }
+    
+  /* Fisrt Tier Dropdown */
+  header ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  header ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */ 
+
+  }
+
+}
+
+@media all and (max-width : 330px) {
+
+  header ul li {
+    display:block;
+    width: 94%;
+  }
+
+}
+
+
 .card{
 	flex: 1;
 	justify-content: flex-end;
