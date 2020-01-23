@@ -205,4 +205,12 @@ nav{
 	.small-cirle,.mid-cirle,.big-cirle{
 		opacity: 0.2;
 	}
+	.container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .cardt{
+    width: 300px;
+  }
 }
