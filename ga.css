@@ -25,6 +25,7 @@ header a{
 header{
   background:#0099cc;
   background: var(--bggradient);
+  text-align: center;
 }
 .dropdown-content{
   display: none;
