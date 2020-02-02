@@ -1,1 +1,1 @@
-alert("xin chao");
+alert("nhấn ok đi");
