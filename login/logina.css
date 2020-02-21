@@ -61,7 +61,7 @@ form h2{
 	bottom: -2px;
 	width: 0;
 	height: 2px;
-	background-color: #63ffea;
+	background-color: rgb(2, 213, 213);
 	transition: .3s;
 }
 .input-div:after{
@@ -71,7 +71,7 @@ form h2{
 	left: 50%;
 }
 .input-div.focus .i i{
-	color: #63ffea;
+	color: rgb(2, 213, 213);
 }
 .input-div.focus div h5{
 	top: -5px;
@@ -132,7 +132,7 @@ a{
 	transition: .3s;
 }
 a:hover{
-	color: #63ffea;
+	color: rgb(2, 213, 213);
 }
 .btn{
 	display: block;
@@ -143,7 +143,7 @@ a:hover{
 	font-size: 1.2rem;
 	outline: none;
 	border:none;
-	background-image: linear-gradient(to right,#77ffea, #63ffea,#49edd4);
+	background-image: linear-gradient(to right, rgb(3, 252, 252),rgb(2, 227, 227),rgb(2, 213, 213));
 	cursor: pointer;
 	color: #fff;
 	text-transform: uppercase;
