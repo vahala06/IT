@@ -4,48 +4,40 @@
 	box-sizing: border-box;
 }
 body{
-
+display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 100vh;
 }
 .wave{
-	position: fixed;
-	height: 100%;
-	left: 0;
-	bottom: 0;
-	z-index: -2;
+  width: 100%;
+  height: 50vh;
+  background:rgb(178, 244, 244);
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  padding-bottom: 80px;
+  box-sizing: initial;
+  z-index: -1;
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
 }
-.container{
-	width: 100vw;
-	height: 100vh;
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
-	grid-gap: 7rem;
-	padding: 0 2rem;
-}
-.img{
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-.img img{
-	width: 500px;
-}
-.login-container{
-	display: flex;
-	align-items: center;
-	text-align: center;
-}
-form{
-	width: 360px;
+/*.container{
+	float: left;
+	width: 50%;
+	height: auto;
+}*/
+.gai{
+	width: 650px;
+	margin: 50% 70%;
 }
 .avatar {
-	width: 100px;
+	width: 80px;
 }
-form h2{
-	font-size: 2.9rem;
-	text-transform: uppercase;
-	margin-top: 15px 0;
-	color: black;
-}
+/*---------xắp sếp---------*/
 .input-div{
 	position: relative;
 	display: grid;
@@ -64,6 +56,15 @@ form h2{
 	background-color: rgb(2, 213, 213);
 	transition: .3s;
 }
+.input-div.one:after,.input-div.one:before{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background-color:rgb(40, 140, 140);
+	transition: .3s;
+}
 .input-div:after{
 	right: 50%;
 }
@@ -72,6 +73,9 @@ form h2{
 }
 .input-div.focus .i i{
 	color: rgb(2, 213, 213);
+}
+.input-div.one.focus .i i{
+	color:rgb(40, 140, 140);
 }
 .input-div.focus div h5{
 	top: -5px;
@@ -83,10 +87,10 @@ form h2{
 
 
 .input-div.one{
-	margin-top: 0;
+	margin-top: 10px;
 }
 .input-div.two{
-	margin-bottom:4px;
+	margin-bottom:20px;
 }
 .i{
 	display: flex;
@@ -99,9 +103,15 @@ form h2{
 }
 .input-div > div{
 	position: relative;
-	height: 45px;
+	height: 30px;
 }
-.input-div > div h5{
+.panel h2{
+	color:rgb(217, 247, 247);
+}
+/*---------**************---------*/
+
+/*---------chữ enail- password---------*/
+.login > div h5{
 	position: absolute;
 	left: 10px;
 	top: 50%;
@@ -110,8 +120,20 @@ form h2{
 	font-size: 18px;
 	transition: .3s;
 }
-.input{
+.register > div h5{
 	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color:rgb(36, 147, 147);
+	font-size: 18px;
+	transition: .3s;
+}
+/*---------**************---------*/
+
+/*---------màu chữ nhập---------*/
+.login .input{
+	position:relative;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -121,8 +143,22 @@ form h2{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: #555;
+	color:rgb(221, 250, 255);
 }
+.register .input{
+	position:relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color:rgb(198, 255, 255);
+}
+/*---------**************---------*/
 a{
 	display: block;
 	text-align: right;
@@ -134,18 +170,35 @@ a{
 a:hover{
 	color: rgb(2, 213, 213);
 }
+/*---------nút login---------*/
+.btntwo{
+	display: block;
+	width: 90%;
+	height: 35px;
+	border-radius: 25px;
+	margin:1rem 0 0 0;
+	font-size: 1.2rem;
+	outline: none;
+	border:none;
+	background-image: linear-gradient(to right,rgb(255, 255, 255),rgb(242, 242, 242),rgb(232, 232, 232));
+	cursor: pointer;
+	color: rgb(2, 213, 213);
+	text-transform: uppercase;
+	background-size: 200%;
+	transition: .5s;
+}
 .btn{
 	display: block;
-	width: 100%;
-	height: 50px;
+	width: 90%;
+	height: 35px;
 	border-radius: 25px;
-	margin: 1rem 0;
+	margin:1rem 0 0 0;
 	font-size: 1.2rem;
 	outline: none;
 	border:none;
 	background-image: linear-gradient(to right, rgb(3, 252, 252),rgb(2, 227, 227),rgb(2, 213, 213));
 	cursor: pointer;
-	color: #fff;
+	color: rgb(217, 247, 247);
 	text-transform: uppercase;
 	background-size: 200%;
 	transition: .5s;
@@ -153,6 +206,278 @@ a:hover{
 .btn:hover{
 	background-position: right;
 }
+.btntwo:hover{
+	background-position: right;
+}
+/*---------**************---------*/
+
+/*---------cân chỉnh---------*/
+.panel {
+	/*float: left;
+  width: 50%;
+  margin: 50% 30%;*/
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.panel .login {
+	width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  background: rgb(52, 54, 63);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-transform: translateX(140px);
+          transform: translateX(140px);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+}
+.panel .register {
+  -webkit-transform: translateX(-140px);
+          transform: translateX(-140px);
+  position: relative;
+}
+.panel .register .button-open, .panel .register .button-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+  z-index: 9;
+}
+.panel .register .button-open::before, .panel .register .button-close::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #ffffff;
+  left: 10px;
+}
+.panel .register .button-open::after, .panel .register .button-close::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #ffffff;
+  left: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.panel .register .inner {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  background: rgb(97, 211, 211);
+  box-shadow: 5px 14px 20px 0 rgb(173, 247, 247);
+  border-radius: 25px;
+
+  width: 100%;
+  width: 340px;
+  height: 440px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+}
+/*---------**************---------*/
+
+
+@-webkit-keyframes loginOpen {
+  0% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+  }
+  50% {
+    -webkit-transform: translateX(-145px);
+            transform: translateX(-145px);
+  }
+  100% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    z-index: -1;
+  }
+}
+
+@keyframes loginOpen {
+  0% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+  }
+  50% {
+    -webkit-transform: translateX(-145px);
+            transform: translateX(-145px);
+  }
+  100% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    z-index: -1;
+  }
+}
+@-webkit-keyframes registerOpen {
+  0% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+  50% {
+    -webkit-transform: translateX(145px);
+            transform: translateX(145px);
+  }
+  100% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+}
+@keyframes registerOpen {
+  0% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+  50% {
+    -webkit-transform: translateX(145px);
+            transform: translateX(145px);
+  }
+  100% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+}
+@-webkit-keyframes loginClose {
+  0% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    z-index: -1;
+  }
+  50% {
+    -webkit-transform: translateX(-145px);
+            transform: translateX(-145px);
+  }
+  100% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    z-index: 1;
+  }
+}
+@keyframes loginClose {
+  0% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    z-index: -1;
+  }
+  50% {
+    -webkit-transform: translateX(-145px);
+            transform: translateX(-145px);
+  }
+  100% {
+    -webkit-transform: translateX(140px);
+            transform: translateX(140px);
+    z-index: 1;
+  }
+}
+@-webkit-keyframes registerClose {
+  0% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+  50% {
+    -webkit-transform: translateX(145px);
+            transform: translateX(145px);
+  }
+  100% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+}
+@keyframes registerClose {
+  0% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+  50% {
+    -webkit-transform: translateX(145px);
+            transform: translateX(145px);
+  }
+  100% {
+    -webkit-transform: translateX(-140px);
+            transform: translateX(-140px);
+  }
+}
+.button-close {
+  visibility: hidden;
+}
+
+input[id="switch-open"]:checked ~ .login {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-animation: loginOpen forwards .8s;
+          animation: loginOpen forwards .8s;
+}
+input[id="switch-open"]:checked ~ .register {
+  -webkit-animation: registerOpen forwards .8s;
+          animation: registerOpen forwards .8s;
+}
+input[id="switch-open"]:checked ~ .register > .inner {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+input[id="switch-open"]:checked ~ .register .button-open {
+  visibility: hidden;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+input[id="switch-open"]:checked ~ .register .button-close {
+  visibility: visible;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+input[id="switch-close"]:checked ~ .login {
+  -webkit-animation: loginClose forwards .8s;
+          animation: loginClose forwards .8s;
+}
+input[id="switch-close"]:checked ~ .register {
+  -webkit-animation: registerClose forwards .8s;
+          animation: registerClose forwards .8s;
+}
+input[id="switch-close"]:checked ~ .register > .inner {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+
 @media screen and (max-width: 1050px){
 	.container{
 		grid-gap: 5rem;
@@ -171,16 +496,15 @@ a:hover{
 	}
 }
 @media screen and (max-width: 900px){
-	.img{
-		display: none;
-	}
-	.container{
-		grid-template-columns: 1fr;
-	}
+	
+	
 	.wave{
 		display: none;
 	}
-	.login-container{
+	.panel{
 		justify-content: center;
+		width: auto;
+		margin: 0;
+		padding: 0;
 	}
 }
