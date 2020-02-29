@@ -132,7 +132,7 @@ a:hover{
 	bottom: 0;
 	width: 100%;
 	height: 30%;
-	background: url(hinh/wavemetduoi.png) center no-repeat;
+	background: url(hinh/waveduoi.png) center no-repeat;
 	background-size: cover;
 }
 .main-message{
@@ -448,7 +448,7 @@ footer .column i+i{
 @media screen and (min-width: 950px){
 	#haha::before{
 		height: 69rem;
-		background: url(hinh/wavemetduoi.png);
+		background: url(hinh/waveduoi.png);
 		background-size: cover;
 	}
 	.testmonials::before{
@@ -463,7 +463,7 @@ footer .column i+i{
 	}
 	#haha::before{
 		height: 85rem;
-		background: url(hinh/wavemetduoi.png);
+		background: url(hinh/waveduoi.png);
 		background-size: cover;
 	}
 	.testmonials::before{
