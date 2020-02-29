@@ -233,7 +233,8 @@ li {
 	flex-direction: column;
 	justify-content: center;
 	cursor: pointer;
-	z-index: 12;
+	/* để nằm dưới menu*/
+	z-index: -1;
 }
 .activities-grid-item::before{
 	content: "";
