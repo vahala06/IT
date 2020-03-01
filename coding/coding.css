@@ -52,8 +52,16 @@ nav{
 	border-bottom: 1px solid rgba(255,255,255,.2);
 }
 .nav-brand{
-	width: 4rem;
-}
+	width: 7.5rem;
+}/*
+.me{
+	justify-content: center;
+	 chu D
+	border-radius: 10% 50% 50% 10%;
+	border-radius: 50%;
+  height: 90px;\
+  z-index: 15;
+}*/
 .menu-icons i{
 	font-size: 3.5rem;
 	color: #fafafa;
@@ -132,7 +140,7 @@ a:hover{
 	bottom: 0;
 	width: 100%;
 	height: 30%;
-	background: url(hinh/waveduoi.png) center no-repeat;
+	background: url(hinh/wavemetduoi.png) center no-repeat;
 	background-size: cover;
 }
 .main-message{
@@ -233,7 +241,7 @@ li {
 	flex-direction: column;
 	justify-content: center;
 	cursor: pointer;
-	/* để nằm dưới menu*/
+	/* để hiện menu*/
 	z-index: -1;
 }
 .activities-grid-item::before{
@@ -246,15 +254,45 @@ li {
 	background-image: linear-gradient(135deg,rgba(0, 67, 119,0.9) 0%,rgba(91, 153, 211,0.8) 100%);
 	z-index: -21;
 }
+.star-gazing::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(135deg,rgba(128, 0, 64,0.9) 0%,rgba(255, 128, 191,0.8) 100%);
+	z-index: -21;
+}
 .star-gazing{
-	background: url(hinh/260a1c12be98f18ee35e79b747ed7973.jpg) top no-repeat;
+	background: url(hinh/feanor-19197.jpg) top no-repeat;
 }
 .hiking{
-	background: url(hinh/DveRiO0V4AA2ELG.jpg) top no-repeat;
+	background: url(hinh/tumblr_pvmah01LSC1uonld7o1_1280.jpg) top no-repeat;
+}
+.hiking::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(135deg,rgba(0, 157, 230,0.9) 0%,rgba(230, 247, 255,0.8) 100%);
+	z-index: -21;
 }
 .camping{
-	background: url(hinh/mina-2.png) top no-repeat;
+	background: url(hinh/Finarfin2.jpg) right no-repeat;
 
+}
+.camping::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(135deg,rgba(128, 128, 0,0.9) 0%,rgba(255, 255, 179,0.8) 100%);
+	z-index: -21;
 }
 .activities-grid-item i{
 	font-size: 4rem;
@@ -270,8 +308,8 @@ li {
 .testmonials{
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(135deg,rgba(0, 67, 119,0.9) 0%,rgba(91, 153, 211,0.8) 100%)
-,url("hinh/Harley-Quinn-artwork-women-digital-art-portrait-display-1620375.jpg") center no-repeat fixed;
+	background: linear-gradient(135deg,rgba(115, 115, 115,0.9) 0%,rgba(191, 191, 191,0.8) 100%)
+,url("hinh/fantasy-art-artwork-The-Hobbit-Gandalf-mythology-darkness-screenshot-1920x1200-px-computer-wallpaper-fictional-character-606030.jpg") center no-repeat fixed;
 	background-size: cover;
 	position: relative;
 }
@@ -305,7 +343,7 @@ li {
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 8rem;
-	color: #eb648b;
+	color: #b3b3b3;
 	opacity: .5;
 	z-index: -5;
 }
@@ -313,7 +351,7 @@ li {
 	width: 10rem;
 	height: 10rem;
 	border-radius: 100%;
-	border: 3px solid #eb648b;
+	border: 3px solid #b3b3b3;
 }
 footer{
 	padding: 2.5rem 0;
@@ -388,7 +426,7 @@ footer .column i+i{
 		height:8rem;
 	}
 	.nav-brand{
-		width: 5rem;
+		width: 7.5rem;
 	}
 	.nav-list{
 		width: initial;
@@ -400,10 +438,6 @@ footer .column i+i{
 		flex-direction: row;
 		transition: initial;
 	}
-		/**
-	* Scrolling CSS
-	*/
-	
 	.menu-icons{
 		display: none;
 	}
@@ -448,7 +482,7 @@ footer .column i+i{
 @media screen and (min-width: 950px){
 	#haha::before{
 		height: 69rem;
-		background: url(hinh/waveduoi.png);
+		background: url(hinh/wavemetduoi.png);
 		background-size: cover;
 	}
 	.testmonials::before{
@@ -463,7 +497,7 @@ footer .column i+i{
 	}
 	#haha::before{
 		height: 85rem;
-		background: url(hinh/waveduoi.png);
+		background: url(hinh/wavemetduoi.png);
 		background-size: cover;
 	}
 	.testmonials::before{
