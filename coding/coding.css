@@ -472,71 +472,52 @@ footer .column i+i{
     flex-direction: row;
     transition: initial;
   }
+  /* drop*/
   .nav-list .button-dropdown {
   position: relative;
 }
 
-    .dropdown-menu li {
+    .nav-dropdown li {
         opacity: 1;
         transform-origin: top center;
       }
+      .nav-list li .nav-dropdown.active {
+  display: block;
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  /* trach trung min-width: 350px*/
+  background-color:rgba(255,255,255,.0);
+  color:#e6ffff;
+}
+a {
+  transition: background-color 0.5s ease-in-out;
+}
+/*------------- menu1 animation -------------------*/
 
-      .dropdown-menu li a {
-        background-color:;
-        padding: 10px 0;
-      }
-      .nav-list li .dropdown-menu{
-          display: none;
-          position: absolute;
-          padding: 0;
-          margin: 0;
-          margin-top:3px;
-          text-align: center;
-          justify-content: center;
-        }
-        .nav-list .button-dropdown {
-          position: relative;
-        }
-        .dropdown-menu li{
-          opacity: 0;
-          transform-origin: top center;
-          background-color:rgba(255,255,255,.1);
-        }
-        .nav-list li .dropdown-menu.active {
-          display: block;
-        }
-        .nav-list ul{
-          background-color:rgba(255,255,255,.2);
-        }
-        .nav-list li .dropdown-menu a {
-          width: 50px;
-        }
-        a {
-          transition: background-color 0.5s ease-in-out;
-        }
-    /*------------- menu6 animation -------------------*/
-
-        .nav-list li .menu li:first-of-type {
-  animation: menu 0.3s ease-in-out forwards;
+.nav-list li .nav-dropdown li:first-of-type {
+  animation: menu1 0.3s ease-in-out forwards;
   animation-delay: 0.3s;
 }
 
-.nav-list li .menu li:nth-of-type(2) {
-  animation: menu 0.3s ease-in-out forwards;
+.nav-list li .nav-dropdown li:nth-of-type(2) {
+  animation: menu1 0.3s ease-in-out forwards;
   animation-delay: 0.6s;
 }
 
-.nav-list li .menu li:nth-of-type(3) {
-  animation: menu 0.3s ease-in-out forwards;
+.nav-list li .nav-dropdown li:nth-of-type(3) {
+  animation: menu1 0.3s ease-in-out forwards;
   animation-delay: 0.9s;
 }
 
-.nav-list li .menu li:last-of-type {
-  animation: menu 0.3s ease-in-out forwards;
+.nav-list li .nav-dropdown li:last-of-type {
+  animation: menu1 0.3s ease-in-out forwards;
   animation-delay: 1.2s;
 }
 
-@keyframes menu {
+@keyframes menu1 {
   0% {
     opacity: 0;
     transform: scale(0.7);
