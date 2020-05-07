@@ -1,0 +1,281 @@
+body{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: black;
+
+}
+.container{
+	position: relative;
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3%;
+	z-index: 100;
+}
+.container .card{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background: red;
+	justify-content: center;
+	align-items: center;
+
+}
+.container .card .imgbx img {
+	max-width: 100px;
+	margin: -50px 50px 0;
+	padding: 0;
+}
+.container .card:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,.1);
+	z-index: 20;
+	pointer-events: none;
+
+
+}
+.container .card:nth-child(1),
+.container .card:nth-child(1) .overlay{
+	background: linear-gradient(45deg,#0d3554,#03233c);
+}
+
+.container .card .imgbx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+.container .card .imgbx h2{
+	margin: -1px 10px 0;
+	padding: 0;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+}
+.container .card .overlay{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	cursor: pointer;
+	border-radius: 50%;
+	transition: 0.5S;
+
+}
+.container .card .overlay:hover{
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: none;
+	opacity: 0.9;
+	border-radius: 0;
+
+}
+.container .card .overlay:before{
+	content: 'xem';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition-delay: 0.5s;
+}
+.container .card .overlay:hover:before{
+	display: none;
+
+	transition-delay: 0.5s;
+}
+.container .card .content{
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 1;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: : 0.5s;
+	color: #fff;
+}
+.container .card .overlay:hover ~ .content{
+	opacity: 0.5;
+	visibility: visible;
+	transition-delay: 0.4s;
+	color: #fff;
+}
+.container .card .content h2{
+	margin: 0;
+	padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+.parallax {
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -1500px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.parallax__cover {
+	/* mau cu
+  background: #0a2a43;
+  */
+  background: #03233c;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.parallax__layer__0 {
+  -webkit-transform: translateZ(-300px) scale(4);
+          transform: translateZ(-300px) scale(4);
+}
+
+.parallax__layer__1 {
+  -webkit-transform: translateZ(-250px) scale(3.5);
+          transform: translateZ(-250px) scale(3.5);
+}
+
+.parallax__layer__2 {
+  -webkit-transform: translateZ(-200px) scale(3);
+          transform: translateZ(-200px) scale(3);
+}
+
+.parallax__layer__3 {
+  -webkit-transform: translateZ(-150px) scale(2.5);
+          transform: translateZ(-150px) scale(2.5);
+}
+
+.parallax__layer__4 {
+  -webkit-transform: translateZ(-100px) scale(2);
+          transform: translateZ(-100px) scale(2);
+}
+
+.parallax__layer__5 {
+  -webkit-transform: translateZ(-50px) scale(1.5);
+          transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__6 {
+  -webkit-transform: translateZ(0px) scale(1);
+          transform: translateZ(0px) scale(1);
+}
+.parallax__layer__7 {
+  -webkit-transform: translateZ(-350px) scale(4);
+          transform: translateZ(-350px) scale(4);
+          z-index: -2;
+}
+
+
+
+/* thay mau hinh*/
+.section:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0a2a43;
+
+	z-index: 100;
+	mix-blend-mode: color;
+}
+
+
+.ten {
+  width: 500px;
+  margin-left: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 7em;
+  margin-left: -350px;
+  margin-top: 40px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+p:nth-child(1) a {
+  color: #fff;
+  font-family: Monoton;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+.artist p{
+  color: #cfcfcf;
+  font-size: 3em;
+  letter-spacing: 0.08em;
+  font-family: 'Reem Kufi', sans-serif;
+  margin: 7% 15% 10% 40%;
+
+
+
